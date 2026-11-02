@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Monthsary Love Letter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Shared art, defined once and reused -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6e2a8"/><stop offset=".5" stop-color="#c9a24b"/><stop offset="1" stop-color="#8f6a1f"/>
+    </linearGradient>
+    <linearGradient id="g-heart" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0708e"/><stop offset=".6" stop-color="#c22c55"/><stop offset="1" stop-color="#8a1a3c"/>
+    </linearGradient>
+    <radialGradient id="g-cameo" cx="50%" cy="38%" r="70%">
+      <stop offset="0" stop-color="#fffaf5"/><stop offset="1" stop-color="#f6cdd7"/>
+    </radialGradient>
+    <radialGradient id="g-wax" cx="38%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#e5506f"/><stop offset=".6" stop-color="#b3213f"/><stop offset="1" stop-color="#7a1228"/>
+    </radialGradient>
+
+    <path id="heart" d="M75 140 C20 100 14 62 38 46 C54 36 70 44 75 58 C80 44 96 36 112 46 C136 62 130 100 75 140Z"/>
+
+    <!-- a full rose seen from above, with leaves -->
+    <g id="rose">
+      <g fill="#3f8a55" stroke="#2a6a3d" stroke-width="2.5">
+        <path d="M100 100 C60 70 20 90 14 120 C50 135 90 125 100 100Z"/>
+        <path d="M100 100 C140 70 180 90 186 120 C150 135 110 125 100 100Z"/>
+        <path d="M100 100 C70 140 80 180 104 190 C122 160 116 128 100 100Z"/>
+      </g>
+      <g stroke="#6e1230" stroke-width="2.5">
+        <g fill="#a62749"><ellipse cx="100" cy="42" rx="34" ry="38"/><ellipse cx="100" cy="42" rx="34" ry="38" transform="rotate(72 100 100)"/><ellipse cx="100" cy="42" rx="34" ry="38" transform="rotate(144 100 100)"/><ellipse cx="100" cy="42" rx="34" ry="38" transform="rotate(216 100 100)"/><ellipse cx="100" cy="42" rx="34" ry="38" transform="rotate(288 100 100)"/></g>
+        <g fill="#c8365b"><ellipse cx="100" cy="64" rx="26" ry="28" transform="rotate(36 100 100)"/><ellipse cx="100" cy="64" rx="26" ry="28" transform="rotate(108 100 100)"/><ellipse cx="100" cy="64" rx="26" ry="28" transform="rotate(180 100 100)"/><ellipse cx="100" cy="64" rx="26" ry="28" transform="rotate(252 100 100)"/><ellipse cx="100" cy="64" rx="26" ry="28" transform="rotate(324 100 100)"/></g>
+        <g fill="#df5877"><ellipse cx="100" cy="80" rx="18" ry="19"/><ellipse cx="100" cy="80" rx="18" ry="19" transform="rotate(90 100 100)"/><ellipse cx="100" cy="80" rx="18" ry="19" transform="rotate(180 100 100)"/><ellipse cx="100" cy="80" rx="18" ry="19" transform="rotate(270 100 100)"/></g>
+      </g>
+      <circle cx="100" cy="100" r="12" fill="#b52b4f" stroke="#6e1230" stroke-width="2.5"/>
+      <path d="M92 100 C92 90 110 90 110 100 C110 110 96 112 96 103 C96 98 104 98 104 102" fill="none" stroke="#6e1230" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M60 40 C80 28 100 28 110 34 M42 90 C44 74 52 62 62 54" stroke="#ffd0da" stroke-opacity=".55" stroke-width="5" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- satin ribbon bow -->
+    <g id="ribbon">
+      <path d="M50 40 C20 4 2 14 6 40 C2 66 20 76 50 40Z" fill="#b83a5c" stroke="#6b1631" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 40 C80 4 98 14 94 40 C98 66 80 76 50 40Z" fill="#b83a5c" stroke="#6b1631" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M18 30 C14 38 16 46 20 50 M82 30 C86 38 84 46 80 50" stroke="#fff" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M44 50 L32 80 L47 71 L50 54Z M56 50 L68 80 L53 71 L50 54Z" fill="#a22d4f" stroke="#6b1631" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="50" cy="40" r="10" fill="url(#g-gold)" stroke="#8f6a1f" stroke-width="2.5"/>
+    </g>
+
+    <!-- gold corner flourish -->
+    <g id="corner" fill="none" stroke="url(#g-gold)" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 50 V14 C3 7 7 3 14 3 H50" stroke-width="2.4"/>
+      <path d="M10 44 V18 C10 13 13 10 18 10 H44" stroke-width="1.2"/>
+      <path d="M17 17 C27 17 29 28 22 30 C17 31 15 26 19 24" stroke-width="1.6"/>
+      <circle cx="3" cy="3" r="2.4" fill="url(#g-gold)" stroke="none"/>
+    </g>
+  </defs>
+</svg>
+
+<!-- Background layers -->
+<div class="bg" aria-hidden="true">
+  <div class="wash"></div>
+  <div class="lattice"></div>
+  <div class="candle"></div>
+  <div class="bokeh" id="bokeh"></div>
+  <svg class="rose r1" viewBox="0 0 200 200"><use href="#rose"/></svg>
+  <svg class="rose r2" viewBox="0 0 200 200"><use href="#rose"/></svg>
+  <svg class="rose r3" viewBox="0 0 200 200"><use href="#rose"/></svg>
+  <svg class="rose r4" viewBox="0 0 200 200"><use href="#rose"/></svg>
+  <div class="vignette"></div>
+</div>
+<svg class="lights" id="lights" preserveAspectRatio="none" aria-hidden="true"></svg>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<main class="card">
+  <svg class="orn tl" viewBox="0 0 54 54" aria-hidden="true"><use href="#corner"/></svg>
+  <svg class="orn tr" viewBox="0 0 54 54" aria-hidden="true"><use href="#corner"/></svg>
+  <svg class="orn bl" viewBox="0 0 54 54" aria-hidden="true"><use href="#corner"/></svg>
+  <svg class="orn br" viewBox="0 0 54 54" aria-hidden="true"><use href="#corner"/></svg>
+
+  <div class="progress" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+
+  <!-- 1. intro -->
+  <section class="screen on" id="s-intro">
+    <div class="emblem" aria-hidden="true">
+      <svg viewBox="0 0 150 170">
+        <ellipse cx="75" cy="88" rx="64" ry="76" fill="url(#g-cameo)" stroke="url(#g-gold)" stroke-width="5"/>
+        <ellipse cx="75" cy="88" rx="57" ry="69" fill="none" stroke="#fffaf0" stroke-width="3.5" stroke-dasharray="0 8" stroke-linecap="round"/>
+        <g fill="#4f9a63" stroke="#2f7544" stroke-width="1.6">
+          <path d="M75 132 C48 128 30 138 24 122 C46 112 68 118 75 132Z"/>
+          <path d="M75 132 C102 128 120 138 126 122 C104 112 82 118 75 132Z"/>
+        </g>
+        <g class="beat"><use href="#heart" fill="url(#g-heart)" stroke="#7a1a3a" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M44 62 C42 72 48 82 56 90" stroke="#fff" stroke-opacity=".6" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+        <path class="spark" d="M24 44 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#f2dca0" stroke="#c9a24b" stroke-width="1"/>
+        <path class="spark" d="M124 56 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2z" fill="#f2dca0" stroke="#c9a24b" stroke-width="1"/>
+        <path class="spark" d="M116 120 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" fill="#f2dca0" stroke="#c9a24b" stroke-width="1"/>
+        <g transform="translate(46 -20) scale(.58)"><use href="#ribbon"/></g>
+      </svg>
+    </div>
+    <h1 id="t-title"></h1>
+    <div class="name"><span id="t-name"></span> <span class="heart">♥</span></div>
+    <div class="divider" aria-hidden="true">♥</div>
+    <div class="box"><div id="t-tagline" style="font-size:1.12rem"></div></div>
+    <div class="hint">Tap a button below, I made this just for you.</div>
+    <div class="btns">
+      <button id="b-next" class="big">Next</button>
+      <button id="b-flowers" class="big lilac">Flowers 🌹</button>
+    </div>
+  </section>
+
+  <!-- 1b. flowers -->
+  <section class="screen" id="s-flowers">
+    <div class="box"><div class="t">Flowers for you</div><div class="kaomoji">(✿◠‿◠)つ💐</div></div>
+    <svg id="bouquet" class="bouquet" viewBox="0 0 360 400" role="img" aria-label="A bouquet of red and white roses, peonies, tulips, cherry blossom, lavender, baby's breath and eucalyptus"></svg>
+    <div class="hint">Every flower is a little piece of my heart.</div>
+    <ul class="legend" id="legend"></ul>
+    <button id="b-back" class="big">Back ♥</button>
+  </section>
+
+  <!-- 2. envelope -->
+  <section class="screen" id="s-env">
+    <div class="env wiggle" id="env" aria-hidden="true">
+      <div class="back"></div>
+      <div class="letter">♥</div>
+      <div class="front"></div>
+      <div class="flap"></div>
+      <svg class="seal" viewBox="0 0 62 62">
+        <path d="M31 2 l5 4 6-2 3 6 6 1 0 6 5 4 -3 5 3 5 -5 4 0 6 -6 1 -3 6 -6-2 -5 4 -5-4 -6 2 -3-6 -6-1 0-6 -5-4 3-5 -3-5 5-4 0-6 6-1 3-6 6 2z" fill="url(#g-wax)"/>
+        <circle cx="31" cy="31" r="19" fill="none" stroke="#7a1228" stroke-opacity=".6" stroke-width="2"/>
+        <path d="M31 46 C13 34 12 22 20 18 C25 16 30 19 31 23 C32 19 37 16 42 18 C50 22 49 34 31 46Z" fill="#c9304f" stroke="#7a1228" stroke-opacity=".7" stroke-width="1.5"/>
+        <path d="M21 24 C21 28 24 31 27 33" stroke="#ffd7df" stroke-opacity=".7" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="box"><div class="t">Do you want to open it?</div><div class="kaomoji">ヾ(≧▽≦*)o</div></div>
+    <div class="btns">
+      <button id="b-open" class="big">Open it</button>
+      <button id="b-no" class="mint big">No ty</button>
+    </div>
+  </section>
+
+  <!-- 2b. said no -->
+  <section class="screen" id="s-sad">
+    <div class="emblem" aria-hidden="true">
+      <svg viewBox="0 0 150 170">
+        <defs>
+          <clipPath id="cl-left"><path d="M0 0 H75 L68 62 L82 78 L70 98 L80 116 L75 170 H0Z"/></clipPath>
+          <clipPath id="cl-right"><path d="M150 0 H75 L68 62 L82 78 L70 98 L80 116 L75 170 H150Z"/></clipPath>
+        </defs>
+        <g class="crack-l" style="transform-origin:75px 90px"><g clip-path="url(#cl-left)"><use href="#heart" fill="url(#g-heart)" stroke="#7a1a3a" stroke-width="3" stroke-linejoin="round"/></g></g>
+        <g class="crack-r" style="transform-origin:75px 90px"><g clip-path="url(#cl-right)"><use href="#heart" fill="url(#g-heart)" stroke="#7a1a3a" stroke-width="3" stroke-linejoin="round"/></g></g>
+        <path class="tear" d="M52 100 C47 110 46 116 52 118 C58 116 57 110 52 100Z" fill="#9fd8f5" stroke="#5fb0dc" stroke-width="1.4"/>
+        <path d="M22 150 C30 140 42 142 40 154 C32 160 24 158 22 150Z" fill="#c8365b" opacity=".8"/>
+        <path d="M112 152 C120 142 132 146 128 158 C120 162 112 160 112 152Z" fill="#df5877" opacity=".8"/>
+      </svg>
+    </div>
+    <div class="name" style="font-size:1.4rem">Awh... Let's try again. Please..? <span style="white-space:nowrap">&gt;﹏&lt;</span></div>
+    <button id="b-again" class="big">Again..?</button>
+  </section>
+
+  <!-- 3. message -->
+  <section class="screen" id="s-msg">
+    <div class="box"><div class="t">A letter for you</div><div class="kaomoji">(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</div></div>
+    <div class="note" id="note"></div>
+    <div class="tap">tap the letter to show it all</div>
+    <button id="b-restart" class="big">Start Over ♥</button>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
